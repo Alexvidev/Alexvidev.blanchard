@@ -1,5 +1,5 @@
 const container = document.querySelector(".container")
-const swiper = new Swiper('.swiper', {
+const hero__swiper = new Swiper('.hero__swiper', {
   slidesPerView: 1,
   spaceBetween: 10,
   speed: 2000,
@@ -8,15 +8,6 @@ const swiper = new Swiper('.swiper', {
   },
   effect: "fade",
   allowTouchMove: false,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  pagination: {
-    el: '.swiper-bullet-pagination',
-    type: 'bullets',
-    clickable: true
-  }
 })
 
 const gallery__content = document.querySelector(".gallery__block-right")

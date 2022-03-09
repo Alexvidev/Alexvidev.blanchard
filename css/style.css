@@ -81,9 +81,11 @@ ul {
 }
 
 .swiper-wrapper {
-  width: 100%;
   height: 100%;
-  box-sizing: content-box;
+}
+
+.swiper-slide {
+  height: inherit;
 }
 
 /*header*/
@@ -191,6 +193,7 @@ ul {
   right: 0;
   bottom: 0;
   z-index: 1;
+  overflow: hidden;
 }
 
 .hero__slide-one {
@@ -268,7 +271,7 @@ ul {
   border: none;
   margin-right: 6px;
   width: 31px;
-  background-color: inherit;
+  background-color: initial;
 }
 
 .hero__search-btn:focus {
@@ -280,7 +283,7 @@ ul {
   font-size: 18px;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.85);
-  background-color: inherit;
+  background-color: initial;
   transform: translateY(-6px);
 }
 
@@ -409,6 +412,7 @@ ul {
 }
 
 .about-us__descr {
+  margin: 0;
   max-width: 1080px;
   width: 100%;
   font-size: 16px;
@@ -589,9 +593,6 @@ ul {
 }
 
 .gallery__swiper {
-  position: absolute;
-  top: 81px;
-  right: 0;
   width: 100%;
   height: 356px;
   overflow: hidden;
@@ -605,6 +606,7 @@ ul {
 .gallery__swiper-img-five,
 .gallery__swiper-img-six {
   padding: 0;
+  width: 350px;
   height: 350px;
   border: none;
   outline: none;
@@ -638,10 +640,9 @@ ul {
 }
 
 .gallery__swiper-button-prev {
-  position: absolute;
+  margin-right: 50px;
+  margin-bottom: 20px;
   padding: 0;
-  top: 21px;
-  left: 0;
   width: 30px;
   height: 30px;
   z-index: 10;
@@ -652,10 +653,7 @@ ul {
 }
 
 .gallery__swiper-button-next {
-  position: absolute;
   padding: 0;
-  top: 21px;
-  left: 100px;
   width: 30px;
   height: 30px;
   z-index: 10;
@@ -666,10 +664,10 @@ ul {
 }
 
 .gallery__swiper-pagination {
-  display: block;
   position: absolute;
-  top: 28px;
-  left: 48px;
+  left: 39px;
+  top: 5px;
+  display: block;
   width: 47px;
   height: 23px;
   color: #ffffff;
