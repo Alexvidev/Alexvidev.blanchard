@@ -16,7 +16,6 @@ const gallery__swiper = new Swiper('.gallery__swiper', {
   spaceBetween: 50,
   slidesPerGroup: 3,
 
-  loop: true,
   pagination: {
     el: '.gallery__swiper-pagination',
     type: 'fraction',
@@ -51,7 +50,6 @@ const events__swiper = new Swiper('.events__swiper', {
   slidesPerView: 3,
   spaceBetween: 47,
 
-  loop: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -117,7 +115,7 @@ ymaps.ready(init);
     myMap.geoObjects.add(myPlacemark);
   };
 
-const element = document.querySelector('.gallery__select');
+const element = document.querySelector('select');
 const choices = new Choices(element, {
   allowHTML : true,
   searchEnabled: false,
