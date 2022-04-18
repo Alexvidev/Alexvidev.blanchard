@@ -10,6 +10,49 @@ const hero__swiper = new Swiper('.hero__swiper', {
   allowTouchMove: false,
 })
 
+const buttonDrop = document.querySelectorAll('.hero__menu-link');
+  //на каждую кнопку вешаем обработчик
+  buttonDrop.forEach(function (btn){
+    btn.addEventListener('click', function(e){
+      let button = this;
+      console.log(this)
+      if (e.target.classList.contains('activ')) { //если уже класс есть на этой кнопке
+        e.currentTarget.classList.remove('activ') //то удаляем конкретно на этой кнопке
+      } else {
+        e.target.classList.add('activ') //иначе добавляем класс
+        buttonDrop.forEach(el => {      //удаляем активный класс на других кнопках
+          if (el != button) {
+            el.classList.remove("activ");
+          }
+        });
+      }
+    })
+  })
+  //если это не кнопка и не само выпадающее меню, то удаляем класс
+  //первое условие необходимо добавить, чтобы незацикливать появление->исчезновение класса
+  document.addEventListener('click', function(event){
+    if (!event.target.classList.contains('hero__menu-link') && !event.target.classList.contains('nav-direction__scroll')){
+      buttonDrop.forEach(function(e){
+        e.classList.remove('activ')
+      })
+    }
+  })
+    
+  const simpleBar1 = new SimpleBar(document.getElementById('scroll-1'), { autoHide: false, scrollbarMaxSize: 28 });
+  simpleBar1.recalculate();
+
+  const simpleBar2 = new SimpleBar(document.getElementById('scroll-2'), { autoHide: false, scrollbarMaxSize: 28 });
+  simpleBar2.recalculate();
+
+  const simpleBar3 = new SimpleBar(document.getElementById('scroll-3'), { autoHide: false, scrollbarMaxSize: 28 });
+  simpleBar3.recalculate();
+
+  const simpleBar4 = new SimpleBar(document.getElementById('scroll-4'), { autoHide: false, scrollbarMaxSize: 28 });
+  simpleBar4.recalculate();
+
+  const simpleBar5 = new SimpleBar(document.getElementById('scroll-5'), { autoHide: false, scrollbarMaxSize: 28 });
+  simpleBar5.recalculate();
+
 const gallery__content = document.querySelector(".gallery__block-right")
 const gallery__swiper = new Swiper('.gallery__swiper', {
   slidesPerView: 3,
@@ -49,6 +92,7 @@ const events = document.querySelector(".events__content")
 const events__swiper = new Swiper('.events__swiper', {
   slidesPerView: 3,
   spaceBetween: 47,
+  slidesPerGroup: 3,
 
   pagination: {
     el: '.swiper-pagination',
@@ -56,6 +100,7 @@ const events__swiper = new Swiper('.events__swiper', {
   },
   navigation: {
     nextEl: '.events__swiper-button-next',
+    prevEl: '.events__swiper-button-prev',
   },
 });
 
@@ -123,3 +168,21 @@ const choices = new Choices(element, {
   shouldSort: false,
 })
 
+tippy('.marker-one', {
+  theme: 'custom',
+  content: 'Пример современных тенденций - современная методология разработки',
+  duration: [600, 600],
+  maxWidth: 270,
+});
+tippy('.marker-two', {
+  theme: 'custom',
+  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+  duration: [600, 600],
+  maxWidth: 270,
+});
+tippy('.marker-three', {
+  theme: 'custom',
+  content: 'В стремлении повысить качество',
+  duration: [600, 600],
+  maxWidth: 270,
+});
