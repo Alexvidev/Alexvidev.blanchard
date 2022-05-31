@@ -55,10 +55,33 @@ const buttonDrop = document.querySelectorAll('.hero__menu-link');
 
 const gallery__content = document.querySelector(".gallery__block-right")
 const gallery__swiper = new Swiper('.gallery__swiper', {
-  slidesPerView: 3,
-  spaceBetween: 50,
-  slidesPerGroup: 3,
-
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      slidesPerGroup: 1,
+    },
+    530: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+      slidesPerGroup: 2,
+    },
+    691: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
+    1600: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    }
+  },
   pagination: {
     el: '.gallery__swiper-pagination',
     type: 'fraction',
@@ -90,13 +113,52 @@ document.querySelector(`[data-target="${path}"]`).classList.add('tabs-item--acti
 
 const events = document.querySelector(".events__content")
 const events__swiper = new Swiper('.events__swiper', {
-  slidesPerView: 3,
-  spaceBetween: 47,
-  slidesPerGroup: 3,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      slidesPerGroup: 1,
+    },
+    426: {
+      slidesPerView: 1,
+      spaceBetween: 70,
+      slidesPerGroup: 1,
+    },
+    596: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+      slidesPerGroup: 2,
+    },
+    691: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
+    820: {
+      slidesPerView: 2,
+      spaceBetween: 60,
+      slidesPerGroup: 2,
+    },
+    952: {
+      slidesPerView: 3,
+      spaceBetween: 27,
+      slidesPerGroup: 3,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
+    1600: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    }
+  },
 
   pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
+    el: '.events__swiper-pagination',
+    clickable: true,
   },
   navigation: {
     nextEl: '.events__swiper-button-next',
@@ -106,11 +168,34 @@ const events__swiper = new Swiper('.events__swiper', {
 
 const projects = document.querySelector(".projects__content")
 const projects__swiper = new Swiper('.projects__swiper', {
-  slidesPerView: 3,
-  spaceBetween: 50,
-  slidesPerGroup: 3,
+  breakpoints: {
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+      slidesPerGroup: 2,
+    },
+    691: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
+    820: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+      slidesPerGroup: 2,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
+    1600: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    }
+  },
 
-  loop: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -186,3 +271,41 @@ tippy('.marker-three', {
   duration: [600, 600],
   maxWidth: 270,
 });
+
+/*burger&search*/
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#burger').addEventListener('click', function(){
+    document.querySelector('#menu').classList.toggle('is-active')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.menu__btn').addEventListener('click', function(){
+    document.querySelector('#menu').classList.toggle('is-active')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.header__search').addEventListener('click', function(){
+    document.querySelector('.header__search-form').classList.toggle('is-active')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.search-form__closed-search').addEventListener('click', function(){
+    document.querySelector('.header__search-form').classList.toggle('is-active')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.gallery__slide-two').addEventListener('click', function(){
+    document.querySelector('#openModal').classList.toggle('is-active')
+  })
+})
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.modal__btn-close').addEventListener('click', function(){
+    document.querySelector('#openModal').classList.toggle('is-active')
+  })
+})
