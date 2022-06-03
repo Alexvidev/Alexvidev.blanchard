@@ -16,7 +16,7 @@
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/jquery.formstyler.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
   <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -52,10 +52,10 @@
             <a class="menu__item-link focus" href="#events">События</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item-link focus" href="projects">Проекты</a>
+            <a class="menu__item-link focus" href="#projects">Проекты</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item-link focus" href="contacts">Контакты</a>
+            <a class="menu__item-link focus" href="#contacts">Контакты</a>
           </li>
         </ul>
         <button class="menu__btn-enter menu-outline-focus">
@@ -231,7 +231,7 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <div class="container">
         <div class="gallery__content">
           <div class="gallery__block-left">
@@ -239,7 +239,7 @@
             <div class="gallery__select">
               <label class="gallery__select-label">Фильтр:</label>
               <select id="selectCastom" name="select">
-                <option value="" disabled selected>Живопись</option>
+                <option value="">Живопись</option>
                 <option value="">Рисунок</option>
                 <option value="">Скульптура</option>
               </select>
@@ -330,7 +330,7 @@
       </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
       <div class="container">
         <h2 class="catalog__title">Каталог</h2>
         <p class="catalog__descr">
@@ -434,7 +434,7 @@
                 <p class="accordion__item-descr">
                   А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                 </p>
-                <a href="#" class="accordion__item-link">В галерею</a>
+                <a href="#gallery" class="accordion__item-link">В галерею</a>
               </div>
             </li>
             <li class="accordion__item">
@@ -450,7 +450,7 @@
                 <p class="accordion__item-descr">
                   А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                 </p>
-                <a href="#" class="accordion__item-link">В галерею</a>
+                <a href="#gallery" class="accordion__item-link">В галерею</a>
               </div>
             </li>
             <li class="accordion__item">
@@ -466,7 +466,7 @@
                 <p class="accordion__item-descr">
                   А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                 </p>
-                <a href="#" class="accordion__item-link">В галерею</a>
+                <a href="#gallery" class="accordion__item-link">В галерею</a>
               </div>
             </li>
             <li class="accordion__item">
@@ -482,7 +482,7 @@
                 <p class="accordion__item-descr">
                   А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                 </p>
-                <a href="#" class="accordion__item-link">В галерею</a>
+                <a href="#gallery" class="accordion__item-link">В галерею</a>
               </div>
             </li>
             <li class="accordion__item">
@@ -498,7 +498,7 @@
                 <p class="accordion__item-descr">
                   А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                 </p>
-                <a href="#" class="accordion__item-link">В галерею</a>
+                <a href="#gallery" class="accordion__item-link">В галерею</a>
               </div>
             </li>
             <li class="accordion__item">
@@ -514,7 +514,7 @@
                 <p class="accordion__item-descr">
                   А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
                 </p>
-                <a href="#" class="accordion__item-link">В галерею</a>
+                <a href="#gallery" class="accordion__item-link">В галерею</a>
               </div>
             </li>
           </ul>
@@ -883,7 +883,7 @@
       </div>
     </section>
 
-    <section class="events">
+    <section class="events" id="events">
       <div class="container">
         <div class="events__content">
           <h2 class="events__title">События</h2>
@@ -966,15 +966,13 @@
               </div>
             </div>
             <button class="events__swiper-button-next">
-              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z" fill="#ECECEC"/>
-                <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black"/>
+              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33334 0.666663L9.66667 9L1.33334 17.3333" stroke="black"/>
               </svg>
             </button>
             <button class="events__swiper-button-prev">
-              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z" fill="#ECECEC"/>
-                <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black"/>
+              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33334 0.666663L9.66667 9L1.33334 17.3333" stroke="black"/>
               </svg>
             </button>
           </div>
@@ -983,7 +981,7 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="container">
         <div class="projects__content">
           <h2 class="projects__title">Проекты</h2>
@@ -1048,13 +1046,21 @@
               </a>
             </div>
           </div>
-          <button class="projects__swiper-button-prev"></button>
-          <button class="projects__swiper-button-next"></button>
+          <button class="projects__swiper-button-prev">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 11L0.999995 6L6 0.999998" stroke="black"/>
+            </svg>
+          </button>
+          <button class="projects__swiper-button-next">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.999995 11L6 6L0.999995 0.999997" stroke="black"/>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="container">
         <div class="contacts__main-block">
           <address class="contacts__address">
@@ -1115,7 +1121,6 @@
         <a class="footer__logo-link" href="#">
           <picture>
             <source srcset="images/header-logo320.png" media="(max-width: 550px)">
-            <source srcset="images/header-logo1024.png" media="(max-width: 1240px)">
             <img src="images/header-logo.png" alt="header-logo">
           </picture>
         </a>

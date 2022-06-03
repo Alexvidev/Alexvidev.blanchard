@@ -48,7 +48,7 @@
   }
 
   .contacts__main-block {
-    padding: 43px 50px 34px 50px;
+    padding: 24px 50px 17px 50px;
   }
 
   .footer {
@@ -75,11 +75,6 @@
 
   .contacts__form {
     margin-right: 0;
-    margin-bottom: 33px;
-  }
-
-  .contacts__address {
-    margin-bottom: 40px;
   }
 }
 
@@ -431,11 +426,15 @@
   }
 
   .contacts__main-block {
-    padding: 43px 5px 40px 50px;
+    padding: 24px 5px 19px 50px;
   }
 
   .contacts__form-action {
     max-width: 930px;
+  }
+
+  .contacts__socials {
+    margin-top: 13px;
   }
 
   .contacts__form-btn {
@@ -877,7 +876,7 @@
   }
 
   .contacts__main-block {
-    padding: 43px 15px 40px 15px;
+    padding: 24px 15px 17px 15px;
   }
 
   .footer {
@@ -945,6 +944,7 @@
   .hero__descr {
     font-size: 12px;
     line-height: 16.34px;
+    margin-bottom: 40px;
   }
 
   .hero__btn {
@@ -1336,7 +1336,7 @@
   }
 
   .projects__content {
-    padding: 9px 15px 50px 15px;
+    padding: 9px 15px 29px 15px;
   }
 
   .projects__title {
@@ -1371,7 +1371,7 @@
 
   .projects__swiper-button-next,
   .projects__swiper-button-prev {
-    bottom: 70px;
+    bottom: 48px;
   }
 
   .contacts__main-block {
@@ -1384,7 +1384,7 @@
   }
 
   .contacts__address {
-    margin-bottom: 17px;
+    margin-bottom: 0;
   }
 
   .contacts__input {
@@ -1397,7 +1397,8 @@
   }
 
   .contacts__socials {
-    transform: translateY(-7px);
+    margin-top: 5px;
+    margin-bottom: 6px;
   }
 
   .contacts__subtitle {
