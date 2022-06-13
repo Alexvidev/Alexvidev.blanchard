@@ -277,12 +277,14 @@ tippy('.marker-three', {
 window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#burger').addEventListener('click', function(){
     document.querySelector('#menu').classList.toggle('is-active')
+      document.querySelector('.body').classList.toggle('is-locked')
   })
 })
 
 window.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.menu__btn').addEventListener('click', function(){
     document.querySelector('#menu').classList.toggle('is-active')
+      document.querySelector('.body').classList.toggle('auto')
   })
 })
 
