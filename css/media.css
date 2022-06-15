@@ -453,12 +453,9 @@
     width: 240px;
   }
 
-  .footer__img-1920 {
-    display: none;
-  }
-
-  .footer__img-1024 {
-    display: block;
+  .footer__img {
+    width: 60px;
+    height: 60px;
   }
 
   .modal__content {

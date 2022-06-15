@@ -36,6 +36,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Open Sans';
   src: url('../fonts/opensanssemibold.woff2') format('woff2'),
@@ -44,6 +45,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Open Sans';
   src: url('../fonts/opensansbold.woff2') format('woff2'),
@@ -52,6 +54,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Open Sans';
   src: url('../fonts/opensansitalic.woff2') format('woff2'),
